@@ -1,0 +1,15 @@
+ManifestFileVersion: 0
+UnityVersion: 6000.0.41f1
+CRC: 608321362
+HashAppended: 0
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: balance
+      Dependencies: {}
+    Info_1:
+      Name: screens
+      Dependencies: {}
+    Info_2:
+      Name: characters
+      Dependencies: {}
