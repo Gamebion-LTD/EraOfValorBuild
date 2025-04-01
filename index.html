@@ -52,16 +52,16 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/EraOfValorBuild.loader.js";
+      var loaderUrl = buildUrl + "/builds.loader.js";
       var config = {
         arguments: [],
-        dataUrl: buildUrl + "/EraOfValorBuild.data",
-        frameworkUrl: buildUrl + "/EraOfValorBuild.framework.js",
-        codeUrl: buildUrl + "/EraOfValorBuild.wasm",
+        dataUrl: buildUrl + "/builds.data",
+        frameworkUrl: buildUrl + "/builds.framework.js",
+        codeUrl: buildUrl + "/builds.wasm",
         streamingAssetsUrl: "StreamingAssets",
-        companyName: "Gamebion",
+        companyName: "DefaultCompany",
         productName: "unity_eraofvalor",
-        productVersion: "1.2.5",
+        productVersion: "1.0",
         showBanner: unityShowBanner,
       };
 
@@ -70,12 +70,12 @@
       // Set this to false if you want to decouple this synchronization from
       // happening inside the engine, and you would instead like to size up
       // the canvas DOM size and WebGL render target sizes yourself.
-      config.matchWebGLToCanvasSize = true;
+      // config.matchWebGLToCanvasSize = false;
 
       // If you would like all file writes inside Unity Application.persistentDataPath
       // directory to automatically persist so that the contents are remembered when
       // the user revisits the site the next time, uncomment the following line:
-      config.autoSyncPersistentDataPath = true;
+      // config.autoSyncPersistentDataPath = true;
       // This autosyncing is currently not the default behavior to avoid regressing
       // existing user projects that might rely on the earlier manual
       // JS_FileSystem_Sync() behavior, but in future Unity version, this will be
@@ -93,7 +93,7 @@
 
         // To lower canvas resolution on mobile devices to gain some
         // performance, uncomment the following line:
-        config.devicePixelRatio = 1;
+        // config.devicePixelRatio = 1;
 
 
       } else {
@@ -122,6 +122,14 @@
 
       document.body.appendChild(script);
 
+    </script>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script>
+        function initTelegramSDK() {
+            Telegram.WebApp.expand();
+            Telegram.WebApp.ready();
+        }
+        window.onload = initTelegramSDK;
     </script>
   </body>
 </html>
