@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity Web Player | unity_eraofvalor</title>
+    <title>Unity Web Player | Era of Valor</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
@@ -20,7 +20,7 @@
       <div id="unity-footer">
         <div id="unity-logo-title-footer"></div>
         <div id="unity-fullscreen-button"></div>
-        <div id="unity-build-title">unity_eraofvalor</div>
+        <div id="unity-build-title">Era of Valor</div>
       </div>
     </div>
     <script>
@@ -52,16 +52,16 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/EraOfValorBuild.loader.js";
+      var loaderUrl = buildUrl + "/20064005edb32c56ec68b4113956ebfc.loader.js";
       var config = {
         arguments: [],
-        dataUrl: buildUrl + "/EraOfValorBuild.data",
-        frameworkUrl: buildUrl + "/EraOfValorBuild.framework.js",
-        codeUrl: buildUrl + "/EraOfValorBuild.wasm",
+        dataUrl: buildUrl + "/7e250367b9c559185fb84ae00e1b4a9e.data",
+        frameworkUrl: buildUrl + "/873374a9874c68b464ce6f2c37375a73.framework.js",
+        codeUrl: buildUrl + "/d283ad297194142df5d18f47c39ac66a.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "Gamebion",
-        productName: "unity_eraofvalor",
-        productVersion: "1.2.5",
+        productName: "Era of Valor",
+        productVersion: "0.1",
         showBanner: unityShowBanner,
       };
 
@@ -70,18 +70,18 @@
       // Set this to false if you want to decouple this synchronization from
       // happening inside the engine, and you would instead like to size up
       // the canvas DOM size and WebGL render target sizes yourself.
-      config.matchWebGLToCanvasSize = true;
+      // config.matchWebGLToCanvasSize = false;
 
       // If you would like all file writes inside Unity Application.persistentDataPath
       // directory to automatically persist so that the contents are remembered when
       // the user revisits the site the next time, uncomment the following line:
-      config.autoSyncPersistentDataPath = true;
+      // config.autoSyncPersistentDataPath = true;
       // This autosyncing is currently not the default behavior to avoid regressing
       // existing user projects that might rely on the earlier manual
       // JS_FileSystem_Sync() behavior, but in future Unity version, this will be
       // expected to change.
 
-      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+      // if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
         // Mobile device style: fill the whole browser client area with the game canvas:
 
         var meta = document.createElement('meta');
@@ -93,14 +93,14 @@
 
         // To lower canvas resolution on mobile devices to gain some
         // performance, uncomment the following line:
-        config.devicePixelRatio = 1;
+        // config.devicePixelRatio = 1;
 
 
-      } else {
-        // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
-        canvas.style.width = "1080px";
-        canvas.style.height = "1920px";
-      }
+       // } else {
+       // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
+       //  canvas.style.width = "1080px";
+       //  canvas.style.height = "1920px";
+       // }
 
       document.querySelector("#unity-loading-bar").style.display = "block";
 
@@ -122,6 +122,14 @@
 
       document.body.appendChild(script);
 
+    </script>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script>
+        function initTelegramSDK() {
+            Telegram.WebApp.expand();
+            Telegram.WebApp.ready();
+        }
+        window.onload = initTelegramSDK;
     </script>
   </body>
 </html>
