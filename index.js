@@ -1,6 +1,6 @@
 function init() {
 	// ServiceWorker clean
-	if ('serviceWorker' in navigator) {
+    if ('serviceWorker' in navigator) {
         navigator.serviceWorker.getRegistrations().then(registrations => {
             registrations.forEach(registration => {
                 registration.unregister().then(success => {
