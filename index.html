@@ -52,12 +52,12 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/09042a1cfaa3cc870420d23125d76598.loader.js";
+      var loaderUrl = buildUrl + "/7dd096e93a1c7b428cc3cda07786f7cc.loader.js";
       var config = {
         arguments: [],
-        dataUrl: buildUrl + "/d45def86a95dae8cf84df21e1c2d509e.data",
+        dataUrl: buildUrl + "/283df44da57c097c64edceaf91c35969.data",
         frameworkUrl: buildUrl + "/96f8b3e4ed80aa64d9bf8b790ff4090e.framework.js",
-        codeUrl: buildUrl + "/54f2109ba4bcbedcb93f40cf16f53d08.wasm",
+        codeUrl: buildUrl + "/daacb671926d76fa978bb94135968ede.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "Gamebion",
         productName: "Era of Valor",
@@ -114,6 +114,12 @@
                 document.querySelector("#unity-fullscreen-button").onclick = () => {
                   unityInstance.SetFullscreen(1);
                 };
+
+                // Telegram User Data
+                const user = Telegram.WebApp.initDataUnsafe.user;
+                const json = JSON.stringify(user);
+                console.log("json data", json);
+                unityInstance.SendMessage("Telegram", "OnTelegramUser", json);
 
               }).catch((message) => {
                 alert(message);
