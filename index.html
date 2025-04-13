@@ -52,12 +52,12 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/7dd096e93a1c7b428cc3cda07786f7cc.loader.js";
+      var loaderUrl = buildUrl + "/3c500f717fd8edf8f58fdc097efa756a.loader.js";
       var config = {
         arguments: [],
-        dataUrl: buildUrl + "/283df44da57c097c64edceaf91c35969.data",
+        dataUrl: buildUrl + "/80c39fa89d73c078a911f4df290ed7aa.data",
         frameworkUrl: buildUrl + "/96f8b3e4ed80aa64d9bf8b790ff4090e.framework.js",
-        codeUrl: buildUrl + "/daacb671926d76fa978bb94135968ede.wasm",
+        codeUrl: buildUrl + "/51179208277796591c7bc7dc5684a5b9.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "Gamebion",
         productName: "Era of Valor",
@@ -116,10 +116,11 @@
                 };
 
                 // Telegram User Data
-                const user = Telegram.WebApp.initDataUnsafe.user;
-                const json = JSON.stringify(user);
-                console.log("json data", json);
-                unityInstance.SendMessage("Telegram", "OnTelegramUser", json);
+                // const user = Telegram.WebApp.initDataUnsafe.user;
+                // const json = JSON.stringify(user);
+                // console.log("json data", json);
+                const json = '{"id":472016797,"first_name":"Даниил","last_name":"","username":"pandrodo","language_code":"en","allows_write_to_pm":true,"photo_url":"https://t.me/i/userpic/320/lrUfeYc8dwdfS1cqt0jBKQHpu5HTXgaydKUu4K6sIKY.svg"}';
+                unityInstance.SendMessage("SelectCharacterScreen", "OnTelegramUser", json);
 
               }).catch((message) => {
                 alert(message);
