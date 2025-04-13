@@ -1,16 +1,16 @@
 ManifestFileVersion: 0
 UnityVersion: 6000.0.41f1
-CRC: 1621512103
+CRC: 403699602
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 4ad7503bd426172865220b4068034a38
+    Hash: b425dc029945995f9ecde3fd8259e1de
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 6481ea65102820afd6e9ee881f49f6af
+    Hash: 097b5bdc59ebe8d68ab4da53ab20d3c6
   IncrementalBuildHash:
     serializedVersion: 2
-    Hash: cab4772c677b214e52946728faea86a6
+    Hash: e9eb00ded56c4062ea90dbdcfdba05ee
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -30,13 +30,21 @@ ClassTypes:
 - Class: 114
   Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
 - Class: 114
+  Script: {fileID: 11500000, guid: 2a4db7a114972834c8e4117be1d82ba3, type: 3}
+- Class: 114
   Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
 - Class: 114
+  Script: {fileID: 11500000, guid: 1aa08ab6e0800fa44ae55d278d1423e3, type: 3}
+- Class: 114
   Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
 - Class: 114
+  Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
+- Class: 114
   Script: {fileID: 11500000, guid: 9085046f02f69544eb97fd06b6048fe2, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 8d6d2bfaa2cfb104b881a5ed29d5c037, type: 3}
 - Class: 115
   Script: {instanceID: 0}
 - Class: 128
@@ -71,14 +79,22 @@ SerializeReferenceClassIdentifiers:
 - AssemblyName: UnityEngine.UI
   ClassName: UnityEngine.UI.Navigation
 - AssemblyName: UnityEngine.UI
+  ClassName: UnityEngine.UI.ScrollRect/ScrollRectEvent
+- AssemblyName: UnityEngine.UI
+  ClassName: UnityEngine.UI.Scrollbar/ScrollEvent
+- AssemblyName: UnityEngine.UI
   ClassName: UnityEngine.UI.Slider/SliderEvent
 - AssemblyName: UnityEngine.UI
   ClassName: UnityEngine.UI.SpriteState
 - AssemblyName: UnityEngine.UI
   ClassName: UnityEngine.UI.Toggle/ToggleEvent
 Assets:
+- Assets/Prefabs/GUI/Screens/PreBattleScreen.prefab
 - Assets/Prefabs/GUI/Screens/MainMetaScreen.prefab
+- Assets/Prefabs/GUI/Screens/BattleScreen.prefab
+- Assets/Prefabs/GUI/Screens/SelectAbilityScreen.prefab
 - Assets/Prefabs/GUI/Screens/SettingsScreen.prefab
 - Assets/Prefabs/GUI/Screens/MainLoadingScreen.prefab
+- Assets/Prefabs/GUI/Screens/PreBattleCharacterScreen.prefab
 - Assets/Prefabs/GUI/Screens/SelectCharacterScreen.prefab
 Dependencies: []

@@ -40,7 +40,12 @@ function init() {
 	// Telegram SDK init
 	Telegram.WebApp.expand();
     Telegram.WebApp.ready();
-    Telegram.WebApp.requestFullscreen();
 }
 
 window.onload = init;
+
+function testFunction(data) {
+    console.log("JS function called from Unity", data);
+    Telegram.WebApp.requestFullscreen();
+    console.log("Requested fullscreen");
+}
