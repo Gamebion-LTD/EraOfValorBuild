@@ -44,8 +44,10 @@ function init() {
 
 window.onload = init;
 
-function testFunction(data) {
-    console.log("JS function called from Unity", data);
-    Telegram.WebApp.requestFullscreen();
-    console.log("Requested fullscreen");
+function toggleFullscreen(data) {
+    if (Telegram.WebApp.isFullscreen) {
+        Telegram.WebApp.exitFullscreen();
+    } else {
+        Telegram.WebApp.requestFullscreen();
+    }
 }
