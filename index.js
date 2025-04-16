@@ -44,6 +44,11 @@ function init() {
 
 window.onload = init;
 
+async function connectWallet() {
+    const connectedWallet = await tonConnectUI.connectWallet();
+    console.log("connected wallet", connectedWallet);
+}
+
 function toggleFullscreen(data) {
     if (Telegram.WebApp.isFullscreen) {
         Telegram.WebApp.exitFullscreen();
