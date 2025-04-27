@@ -1,21 +1,19 @@
 ManifestFileVersion: 0
 UnityVersion: 6000.0.41f1
-CRC: 1882537292
+CRC: 3413630101
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 1dca08652c1099b8479878688df33c9e
+    Hash: 3a5e9aba404c0559b3dcfcda2ae00531
   TypeTreeHash:
     serializedVersion: 2
-    Hash: b075c22367396cb798b5f42a0b58407c
+    Hash: 316b14fc66a2f56c1793cc3a6bf48318
   IncrementalBuildHash:
     serializedVersion: 2
-    Hash: 82ac8069742c00d26d7ef9f85560d57e
+    Hash: 00957bf7b4cafc82835a04307cb95fd9
 HashAppended: 0
 ClassTypes:
 - Class: 1
-  Script: {instanceID: 0}
-- Class: 4
   Script: {instanceID: 0}
 - Class: 21
   Script: {instanceID: 0}
@@ -23,16 +21,28 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 48
   Script: {instanceID: 0}
+- Class: 74
+  Script: {instanceID: 0}
 - Class: 82
+  Script: {instanceID: 0}
+- Class: 111
   Script: {instanceID: 0}
 - Class: 114
   Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
 - Class: 114
+  Script: {fileID: 11500000, guid: 0eec8af73f4c06e4fb32a27e91d67b53, type: 3}
+- Class: 114
   Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 8d3167a517f0ea14db7ed84fa5b5545b, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 8d6d2bfaa2cfb104b881a5ed29d5c037, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 378053515d6954542b55fdaa2c9e00d8, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: aff2aa7b8569a70438cdd38530a2e79f, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 2a4db7a114972834c8e4117be1d82ba3, type: 3}
 - Class: 114
@@ -45,6 +55,8 @@ ClassTypes:
   Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 9085046f02f69544eb97fd06b6048fe2, type: 3}
 - Class: 114
@@ -64,12 +76,40 @@ ClassTypes:
 - Class: 225
   Script: {instanceID: 0}
 SerializeReferenceClassIdentifiers:
+- AssemblyName: Unity.TextMeshPro
+  ClassName: TMPro.FaceInfo_Legacy
+- AssemblyName: Unity.TextMeshPro
+  ClassName: TMPro.FontAssetCreationSettings
+- AssemblyName: Unity.TextMeshPro
+  ClassName: TMPro.KerningTable
+- AssemblyName: Unity.TextMeshPro
+  ClassName: TMPro.TMP_Character
+- AssemblyName: Unity.TextMeshPro
+  ClassName: TMPro.TMP_FontFeatureTable
+- AssemblyName: Unity.TextMeshPro
+  ClassName: TMPro.TMP_FontWeightPair
+- AssemblyName: Unity.TextMeshPro
+  ClassName: TMPro.VertexGradient
 - AssemblyName: UnityEngine.CoreModule
   ClassName: UnityEngine.Events.ArgumentCache
 - AssemblyName: UnityEngine.CoreModule
   ClassName: UnityEngine.Events.PersistentCallGroup
 - AssemblyName: UnityEngine.CoreModule
   ClassName: UnityEngine.Events.PersistentListenerMode
+- AssemblyName: UnityEngine.TextCoreFontEngineModule
+  ClassName: UnityEngine.TextCore.FaceInfo
+- AssemblyName: UnityEngine.TextCoreFontEngineModule
+  ClassName: UnityEngine.TextCore.Glyph
+- AssemblyName: UnityEngine.TextCoreFontEngineModule
+  ClassName: UnityEngine.TextCore.GlyphMetrics
+- AssemblyName: UnityEngine.TextCoreFontEngineModule
+  ClassName: UnityEngine.TextCore.GlyphRect
+- AssemblyName: UnityEngine.TextCoreFontEngineModule
+  ClassName: UnityEngine.TextCore.LowLevel.GlyphAdjustmentRecord
+- AssemblyName: UnityEngine.TextCoreFontEngineModule
+  ClassName: UnityEngine.TextCore.LowLevel.GlyphPairAdjustmentRecord
+- AssemblyName: UnityEngine.TextCoreFontEngineModule
+  ClassName: UnityEngine.TextCore.LowLevel.GlyphValueRecord
 - AssemblyName: UnityEngine.UI
   ClassName: UnityEngine.UI.AnimationTriggers
 - AssemblyName: UnityEngine.UI
@@ -93,11 +133,10 @@ SerializeReferenceClassIdentifiers:
 - AssemblyName: UnityEngine.UI
   ClassName: UnityEngine.UI.Toggle/ToggleEvent
 Assets:
-- Assets/Prefabs/GUI/Screens/PreBattleScreen.prefab
 - Assets/Prefabs/GUI/Screens/MainMetaScreen.prefab
 - Assets/Prefabs/GUI/Screens/BattleScreen.prefab
-- Assets/Prefabs/GUI/Screens/SelectAbilityScreen.prefab
 - Assets/Prefabs/GUI/Screens/SettingsScreen.prefab
+- Assets/Prefabs/GUI/Screens/FlyMessage.prefab
 - Assets/Prefabs/GUI/Screens/MainLoadingScreen.prefab
 - Assets/Prefabs/GUI/Screens/PreBattleCharacterScreen.prefab
 - Assets/Prefabs/GUI/Screens/SelectCharacterScreen.prefab

@@ -44,6 +44,10 @@ function init() {
 
 window.onload = init;
 
+async function createInvoice() {
+    connectedWallet.createInvoice();
+}
+
 async function connectWallet() {
     const tonConnectUI = new TON_CONNECT_UI.TonConnectUI({
         manifestUrl: 'https://gamebion-ltd.github.io/EraOfValorBuild/manifest.json',

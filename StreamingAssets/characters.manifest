@@ -1,22 +1,24 @@
 ManifestFileVersion: 0
 UnityVersion: 6000.0.41f1
-CRC: 376293384
+CRC: 912970165
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 795cd0e81c7978325fe3c3861ad5ece1
+    Hash: 9429d6e476d82537152acc3c620efde9
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 19a07376d2a275fe0c687466fc88681f
+    Hash: e9a3c009dc3fd3198b6a6cd542ad5b7b
   IncrementalBuildHash:
     serializedVersion: 2
-    Hash: e869e53cb9a56ed247bd97be6ef63c8f
+    Hash: d4f3b9668656c0d9a8ff98c5ea477150
 HashAppended: 0
 ClassTypes:
 - Class: 1
   Script: {instanceID: 0}
 - Class: 28
   Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
 - Class: 115
@@ -31,7 +33,17 @@ SerializeReferenceClassIdentifiers:
 - AssemblyName: UnityEngine.CoreModule
   ClassName: UnityEngine.Events.PersistentCallGroup
 - AssemblyName: UnityEngine.UI
+  ClassName: UnityEngine.UI.AnimationTriggers
+- AssemblyName: UnityEngine.UI
+  ClassName: UnityEngine.UI.ColorBlock
+- AssemblyName: UnityEngine.UI
   ClassName: UnityEngine.UI.MaskableGraphic/CullStateChangedEvent
+- AssemblyName: UnityEngine.UI
+  ClassName: UnityEngine.UI.Navigation
+- AssemblyName: UnityEngine.UI
+  ClassName: UnityEngine.UI.Slider/SliderEvent
+- AssemblyName: UnityEngine.UI
+  ClassName: UnityEngine.UI.SpriteState
 Assets:
 - Assets/Prefabs/Characters/3333.prefab
 - Assets/Prefabs/Characters/5555.prefab
