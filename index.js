@@ -60,7 +60,7 @@ async function connectWallet() {
 
     if (connectedWallet && connectedWallet.account) {
         const walletAddress = connectedWallet.account.address;
-        window.unityInstance.SendMessage("ShopScreenManager", "OnWalletConnected", walletAddress);
+        window.unityInstance.SendMessage("TelegramBridge", "OnWalletConnected", walletAddress);
     }
 }
 
