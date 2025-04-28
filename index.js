@@ -53,8 +53,15 @@ async function connectWallet() {
         manifestUrl: 'https://gamebion-ltd.github.io/EraOfValorBuild/manifest.json',
     });
 
+    window.unityInstance.SendMessage("TelegramBridge", "OnWalletConnected", "xxxxx");
+
     const connectedWallet = await tonConnectUI.connectWallet();
     console.log("connected wallet", connectedWallet);
+
+    if (connectedWallet && connectedWallect.account) {
+        const walletAddress = connectedWallet.account.address;
+        window.unityInstance.SendMessage("ShopScreenManager", "OnWalletConnected", walletAddress);
+    }
 }
 
 function toggleFullscreen(data) {
