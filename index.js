@@ -58,7 +58,7 @@ async function connectWallet() {
     const connectedWallet = await tonConnectUI.connectWallet();
     console.log("connected wallet", connectedWallet);
 
-    if (connectedWallet && connectedWallect.account) {
+    if (connectedWallet && connectedWallet.account) {
         const walletAddress = connectedWallet.account.address;
         window.unityInstance.SendMessage("ShopScreenManager", "OnWalletConnected", walletAddress);
     }
