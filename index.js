@@ -75,6 +75,8 @@ async function connectWallet() {
         manifestUrl: 'https://gamebion-ltd.github.io/EraOfValorBuild/manifest.json',
     });
 
+    window.tonConnectUI = tonConnectUI;
+
     window.unityInstance.SendMessage("TelegramBridge", "OnWalletConnected", "xxxxx");
 
     const connectedWallet = await tonConnectUI.connectWallet();
