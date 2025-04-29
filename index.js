@@ -45,7 +45,29 @@ function init() {
 window.onload = init;
 
 async function createInvoice() {
-    connectedWallet.createInvoice();
+    try {
+        const connectedWallet = tonConnectUI.wallet;
+        if (!connectedWallet) {
+            return;
+        }
+
+        const toAddress = "UQBlvlMVBZ5sqM_fKc1qGCR5KrYHEbqjJCHBMYLAZ5vVTwKo";
+
+        const transaction = {
+            validUntil: Math.floor(Date.now() / 1000) + 300,
+            messages: [
+                {
+                    address: toAddress,
+                    amount: (0.05 * 1e9).toString(),
+                    payload: null
+                }
+            ]
+        };
+
+        await tonConnectUI.sendTransaction(transaction);
+    } catch (error) {
+        console.log("transaction error:", error);
+    }
 }
 
 async function connectWallet() {
