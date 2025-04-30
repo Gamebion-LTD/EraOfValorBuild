@@ -44,7 +44,7 @@ function init() {
 
 window.onload = init;
 
-async function createInvoice() {
+async function createTransaction(price) {
     try {
         const connectedWallet = tonConnectUI.wallet;
         if (!connectedWallet) {
@@ -58,7 +58,7 @@ async function createInvoice() {
             messages: [
                 {
                     address: toAddress,
-                    amount: (0.05 * 1e9).toString(),
+                    amount: (price * 1e9).toString(),
                     payload: null
                 }
             ]
