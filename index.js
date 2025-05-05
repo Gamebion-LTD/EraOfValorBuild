@@ -58,7 +58,7 @@ async function createTransaction(price) {
             messages: [
                 {
                     address: toAddress,
-                    amount: (price * 1e9).toString(),
+                    amount: price,
                     payload: null
                 }
             ]
