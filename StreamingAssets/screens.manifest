@@ -1,16 +1,16 @@
 ManifestFileVersion: 0
 UnityVersion: 6000.0.41f1
-CRC: 2282053171
+CRC: 3099450979
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 8e3fbbfedd177febb33ec4a58729bf6d
+    Hash: 9229a460a6f07578480d245a98794be7
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 316b14fc66a2f56c1793cc3a6bf48318
+    Hash: 0d3ddef4165ae6b6d7da86f57ffb23f4
   IncrementalBuildHash:
     serializedVersion: 2
-    Hash: 766c0419cdc9b1bce6c8259ad495ff72
+    Hash: e52d0011e67be992412b41efc5ebd050
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -37,6 +37,8 @@ ClassTypes:
   Script: {fileID: 11500000, guid: 8d3167a517f0ea14db7ed84fa5b5545b, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 8a8695521f0d02e499659fee002a26c2, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 8d6d2bfaa2cfb104b881a5ed29d5c037, type: 3}
 - Class: 114
@@ -94,6 +96,8 @@ SerializeReferenceClassIdentifiers:
   ClassName: UnityEngine.Events.PersistentCallGroup
 - AssemblyName: UnityEngine.CoreModule
   ClassName: UnityEngine.Events.PersistentListenerMode
+- AssemblyName: UnityEngine.CoreModule
+  ClassName: UnityEngine.RectOffset
 - AssemblyName: UnityEngine.TextCoreFontEngineModule
   ClassName: UnityEngine.TextCore.FaceInfo
 - AssemblyName: UnityEngine.TextCoreFontEngineModule
