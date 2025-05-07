@@ -1,16 +1,16 @@
 ManifestFileVersion: 0
 UnityVersion: 6000.0.41f1
-CRC: 3099450979
+CRC: 4266620472
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 9229a460a6f07578480d245a98794be7
+    Hash: 8e54f8e9a8f45ed24207219dae2e4fcf
   TypeTreeHash:
     serializedVersion: 2
     Hash: 0d3ddef4165ae6b6d7da86f57ffb23f4
   IncrementalBuildHash:
     serializedVersion: 2
-    Hash: e52d0011e67be992412b41efc5ebd050
+    Hash: fd05d60c54b15715684a9fd9ce49b1c0
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -132,6 +132,7 @@ SerializeReferenceClassIdentifiers:
   ClassName: UnityEngine.UI.Toggle/ToggleEvent
 Assets:
 - Assets/Prefabs/GUI/Screens/MainMetaScreen.prefab
+- Assets/Prefabs/GUI/Parts/ShopButton.prefab
 - Assets/Prefabs/GUI/Screens/BattleScreen.prefab
 - Assets/Prefabs/GUI/Screens/SettingsScreen.prefab
 - Assets/Prefabs/GUI/Screens/FlyMessage.prefab
