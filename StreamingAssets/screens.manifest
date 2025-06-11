@@ -1,16 +1,16 @@
 ManifestFileVersion: 0
 UnityVersion: 6000.0.41f1
-CRC: 4266620472
+CRC: 1511465408
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 8e54f8e9a8f45ed24207219dae2e4fcf
+    Hash: 923a6798a52ed7d1344d22f6d3a90f0b
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 0d3ddef4165ae6b6d7da86f57ffb23f4
+    Hash: 69375d06562afab35505eca430e3f44f
   IncrementalBuildHash:
     serializedVersion: 2
-    Hash: fd05d60c54b15715684a9fd9ce49b1c0
+    Hash: f6836921d49f96504bc02d260453974b
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -38,6 +38,8 @@ ClassTypes:
 - Class: 114
   Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
 - Class: 114
+  Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
+- Class: 114
   Script: {fileID: 11500000, guid: 8a8695521f0d02e499659fee002a26c2, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 8d6d2bfaa2cfb104b881a5ed29d5c037, type: 3}
@@ -45,8 +47,6 @@ ClassTypes:
   Script: {fileID: 11500000, guid: 378053515d6954542b55fdaa2c9e00d8, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: aff2aa7b8569a70438cdd38530a2e79f, type: 3}
-- Class: 114
-  Script: {fileID: 11500000, guid: 2a4db7a114972834c8e4117be1d82ba3, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
 - Class: 114
@@ -122,8 +122,6 @@ SerializeReferenceClassIdentifiers:
   ClassName: UnityEngine.UI.Navigation
 - AssemblyName: UnityEngine.UI
   ClassName: UnityEngine.UI.ScrollRect/ScrollRectEvent
-- AssemblyName: UnityEngine.UI
-  ClassName: UnityEngine.UI.Scrollbar/ScrollEvent
 - AssemblyName: UnityEngine.UI
   ClassName: UnityEngine.UI.Slider/SliderEvent
 - AssemblyName: UnityEngine.UI

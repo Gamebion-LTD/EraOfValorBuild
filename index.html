@@ -52,16 +52,16 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/8f4faa6787bcbfbaf8caf14d562f5854.loader.js";
+      var loaderUrl = buildUrl + "/851de2850787d8db542d1d066857a6e6.loader.js";
       var config = {
         arguments: [],
-        dataUrl: buildUrl + "/c44b6b24b8c16a27dcff6bc7174307a4.data",
-        frameworkUrl: buildUrl + "/a20bc346efdecbd2fcdd374e7178d247.framework.js",
-        codeUrl: buildUrl + "/1c2e423fcafa7f7498161bfa2298a467.wasm",
+        dataUrl: buildUrl + "/547b840d162097ee4d133280f7351f5b.data",
+        frameworkUrl: buildUrl + "/b054b2d5d5e4091b5c676113c2da12d6.framework.js",
+        codeUrl: buildUrl + "/0a7b4c2006654cc3141c159fcb25126b.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "Gamebion",
         productName: "Era of Valor",
-        productVersion: "0.1.1",
+        productVersion: "1.1.1",
         showBanner: unityShowBanner,
       };
 
@@ -111,6 +111,11 @@
           document.querySelector("#unity-progress-bar-full").style.width = 100 * progress + "%";
         }).then((unityInstance) => {
                 window.unityInstance = unityInstance;
+
+                if (Telegram?.WebApp?.initData) {
+                  console.log("send data from unity init");
+                  window.unityInstance.SendMessage("TelegramBridge", "OnTelegramReady", mockData);
+                }
 
                 document.querySelector("#unity-loading-bar").style.display = "none";
                 document.querySelector("#unity-fullscreen-button").onclick = () => {
