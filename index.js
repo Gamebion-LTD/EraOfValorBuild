@@ -41,12 +41,12 @@ function init() {
 	Telegram.WebApp.expand();
     Telegram.WebApp.ready();
 
-    const initData = Telegram.WebApp.initData;
     const mockData = "query_id=AAHqU7dAAAAAAM8G0efO3LNg&user=%7B%22id%22%3A123456789%2C%22first_name%22%3A%22Daniil%22%2C%22username%22%3A%22pandrodo%22%2C%22language_code%22%3A%22en%22%7D&auth_date=1718025300&hash=5fcd2c1a0e0fbb8e3ecf1a9a90e0e8ed394d58e1ed1474ac5a9e3e3d65bbd9d0";
+    const initData = Telegram.WebApp.initData ?? mockData;
 
     if (window.unityInstance) {
-        console.log("send data from js init");
-        window.unityInstance.SendMessage("TelegramBridge", "OnTelegramReady", mockData);
+        console.log("send data from js init", initData);
+        window.unityInstance.SendMessage("TelegramBridge", "OnTelegramReady", initData);
     }
 }
 
