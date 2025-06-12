@@ -1,145 +1,50 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity Web Player | Era of Valor</title>
-    <link rel="shortcut icon" href="TemplateData/favicon.ico">
-    <link rel="stylesheet" href="TemplateData/style.css">
+    <meta charset="utf-8" />
+    <title>Era of Valor</title>
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes" />
+    <link rel="stylesheet" href="TemplateData/style.css" />
+    <link rel="shortcut icon" href="TemplateData/favicon.ico" />
   </head>
   <body>
-    <div id="unity-container" class="unity-desktop">
-      <canvas id="unity-canvas" width=1080 height=1920 tabindex="-1"></canvas>
-      <div id="unity-loading-bar">
-        <div id="unity-logo"></div>
-        <div id="unity-progress-bar-empty">
-          <div id="unity-progress-bar-full"></div>
-        </div>
-      </div>
-      <div id="unity-warning"> </div>
-      <div id="unity-footer">
-        <div id="unity-logo-title-footer"></div>
-        <div id="unity-fullscreen-button"></div>
-        <div id="unity-build-title">Era of Valor</div>
-      </div>
+    <div id="unity-container" class="unity-mobile">
+      <canvas id="unity-canvas" width="960" height="600" tabindex="-1"></canvas>
     </div>
+
     <script>
-      var canvas = document.querySelector("#unity-canvas");
+      const canvas = document.querySelector("#unity-canvas");
+      const buildUrl = "Build";
+      const loaderUrl = buildUrl + "/851de2850787d8db542d1d066857a6e6.loader.js";;
 
-      // Shows a temporary message banner/ribbon for a few seconds, or
-      // a permanent error message on top of the canvas if type=='error'.
-      // If type=='warning', a yellow highlight color is used.
-      // Modify or remove this function to customize the visually presented
-      // way that non-critical warnings and error messages are presented to the
-      // user.
-      function unityShowBanner(msg, type) {
-        var warningBanner = document.querySelector("#unity-warning");
-        function updateBannerVisibility() {
-          warningBanner.style.display = warningBanner.children.length ? 'block' : 'none';
-        }
-        var div = document.createElement('div');
-        div.innerHTML = msg;
-        warningBanner.appendChild(div);
-        if (type == 'error') div.style = 'background: red; padding: 10px;';
-        else {
-          if (type == 'warning') div.style = 'background: yellow; padding: 10px;';
-          setTimeout(function() {
-            warningBanner.removeChild(div);
-            updateBannerVisibility();
-          }, 5000);
-        }
-        updateBannerVisibility();
-      }
-
-      var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/851de2850787d8db542d1d066857a6e6.loader.js";
-      var config = {
-        arguments: [],
-        dataUrl: buildUrl + "/7f0ff8f66dff4cb381303db89ac7dc96.data",
+      const config = {
+        dataUrl: buildUrl + "/af470276d326f7fd14af6c3b6305ca5a.data",
         frameworkUrl: buildUrl + "/b054b2d5d5e4091b5c676113c2da12d6.framework.js",
         codeUrl: buildUrl + "/0a7b4c2006654cc3141c159fcb25126b.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "Gamebion",
         productName: "Era of Valor",
         productVersion: "1.1.1",
-        showBanner: unityShowBanner,
       };
 
-      // By default, Unity keeps WebGL canvas render target size matched with
-      // the DOM size of the canvas element (scaled by window.devicePixelRatio)
-      // Set this to false if you want to decouple this synchronization from
-      // happening inside the engine, and you would instead like to size up
-      // the canvas DOM size and WebGL render target sizes yourself.
-      // config.matchWebGLToCanvasSize = false;
-
-      // If you would like all file writes inside Unity Application.persistentDataPath
-      // directory to automatically persist so that the contents are remembered when
-      // the user revisits the site the next time, uncomment the following line:
-      // config.autoSyncPersistentDataPath = true;
-      // This autosyncing is currently not the default behavior to avoid regressing
-      // existing user projects that might rely on the earlier manual
-      // JS_FileSystem_Sync() behavior, but in future Unity version, this will be
-      // expected to change.
-
-      // if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
-        // Mobile device style: fill the whole browser client area with the game canvas:
-
-        var meta = document.createElement('meta');
-        meta.name = 'viewport';
-        meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
-        document.getElementsByTagName('head')[0].appendChild(meta);
-        document.querySelector("#unity-container").className = "unity-mobile";
-        canvas.className = "unity-mobile";
-
-        // To lower canvas resolution on mobile devices to gain some
-        // performance, uncomment the following line:
-        // config.devicePixelRatio = 1;
-
-
-       // } else {
-       // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
-       //  canvas.style.width = "1080px";
-       //  canvas.style.height = "1920px";
-       // }
-
-      document.querySelector("#unity-loading-bar").style.display = "block";
-
-      var script = document.createElement("script");
+      const script = document.createElement("script");
       script.src = loaderUrl;
       script.onload = () => {
-        createUnityInstance(canvas, config, (progress) => {
-          document.querySelector("#unity-progress-bar-full").style.width = 100 * progress + "%";
-        }).then((unityInstance) => {
-                window.unityInstance = unityInstance;
+        createUnityInstance(canvas, config).then((unityInstance) => {
+          window.unityInstance = unityInstance;
 
-                const mockData = "query_id=AAHqU7dAAAAAAM8G0efO3LNg&user=%7B%22id%22%3A123456789%2C%22first_name%22%3A%22Daniil%22%2C%22username%22%3A%22pandrodo%22%2C%22language_code%22%3A%22en%22%7D&auth_date=1718025300&hash=5fcd2c1a0e0fbb8e3ecf1a9a90e0e8ed394d58e1ed1474ac5a9e3e3d65bbd9d0";
-                const initData = Telegram.WebApp.initData ?? mockData;
+          const mockData = "query_id=AAHqU7dAAAAAAM8G0efO3LNg&user=%7B%22id%22%3A123456789%2C%22first_name%22%3A%22Daniil%22%2C%22username%22%3A%22pandrodo%22%2C%22language_code%22%3A%22en%22%7D&auth_date=1718025300&hash=5fcd2c1a0e0fbb8e3ecf1a9a90e0e8ed394d58e1ed1474ac5a9e3e3d65bbd9d0";
+          const initData = Telegram.WebApp.initData || mockData;
 
-                if (Telegram?.WebApp?.initData) {
-                  console.log("send data from unity init", initData);
-                  window.unityInstance.SendMessage("TelegramBridge", "OnTelegramReady", initData);
-                }
+          if (Telegram?.WebApp?.initData) {
+            unityInstance.SendMessage("TelegramBridge", "OnTelegramReady", initData);
+          }
 
-                document.querySelector("#unity-loading-bar").style.display = "none";
-                document.querySelector("#unity-fullscreen-button").onclick = () => {
-                  unityInstance.SetFullscreen(1);
-                };
-
-                // Telegram User Data
-                // const user = Telegram.WebApp.initDataUnsafe.user;
-                // const json = JSON.stringify(user);
-                // console.log("json data", json);
-                //const json = '{"id":472016797,"first_name":"Даниил","last_name":"","username":"pandrodo","language_code":"en","allows_write_to_pm":true,"photo_url":"https://t.me/i/userpic/320/lrUfeYc8dwdfS1cqt0jBKQHpu5HTXgaydKUu4K6sIKY.svg"}';
-                //unityInstance.SendMessage("SelectCharacterScreen", "OnTelegramUser", json);
-
-              }).catch((message) => {
-                alert(message);
-              });
-            };
-
+        }).catch(alert);
+      };
       document.body.appendChild(script);
-
     </script>
+
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <script src="https://unpkg.com/@tonconnect/ui@latest/dist/tonconnect-ui.min.js"></script>
     <script src="index.js"></script>
