@@ -1,0 +1,28 @@
+ManifestFileVersion: 0
+UnityVersion: 6000.0.41f1
+CRC: 1897788603
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 18b383f5037c93d683d90682d5198cd7
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 5ad585dd02dfb5016c0dad519eab8f49
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: e18e7731f90e8440c2c217749218f919
+HashAppended: 0
+ClassTypes:
+- Class: 49
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/GameBalance/Binary/Characters.txt
+- Assets/GameBalance/Binary/Boss.txt
+- Assets/GameBalance/Binary/Gear.txt
+- Assets/GameBalance/Binary/PassiveAbility.txt
+- Assets/GameBalance/Binary/Abilities.txt
+- Assets/GameBalance/Binary/Rewards.txt
+- Assets/GameBalance/Binary/BossDescriptions.txt
+- Assets/GameBalance/Binary/Equipments.txt
+Dependencies: []
